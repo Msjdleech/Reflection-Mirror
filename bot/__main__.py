@@ -99,12 +99,12 @@ def getHerokuDetails(h_api_key, h_app_name):
             abc += f"<b>├ 🎃 APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
             abc += f"<b>├ 🗑️ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
             abc += f'<b>│</b>\n'
-            abc += f'<b>╰─《 ☣️ {CREDIT_NAME} ☣️ 》</b>'
+            abc += f'<b>╰─《 ☣️ {ST✓} ☣️ 》</b>'
         else:
             abc += f"<b>├ APP USAGE:</b> {get_readable_time(AppQuotaUsed)}\n"
             abc += f"<b>├ OTHER APP:</b> {get_readable_time(OtherAppsUsage)}\n"
             abc += f'<b>│</b>\n'
-            abc += f'<b>╰─《 {CREDIT_NAME} 》</b>'
+            abc += f'<b>╰─《 {ST✓} 》</b>'
         return abc
     except Exception as g:
         LOGGER.error(g)
@@ -204,11 +204,11 @@ def stats(update, context):
 def start(update, context):
     buttons = ButtonMaker()
     if EMOJI_THEME is True:
-        buttons.buildbutton(f"😎 {START_BTN1_NAME}", f"{START_BTN1_URL}")
-        buttons.buildbutton(f"🔥 {START_BTN2_NAME}", f"{START_BTN2_URL}")
+        buttons.buildbutton(f"⚔️ {Join Channel} ⚔️", f"{https://t.me/+Dq-Eov8vIj00OTk1}")
+        buttons.buildbutton(f"🧑‍💻 {Mirror Group}", f"{https://t.me/stpremiumleech}")
     else:
-        buttons.buildbutton(f"{START_BTN1_NAME}", f"{START_BTN1_URL}")
-        buttons.buildbutton(f"{START_BTN2_NAME}", f"{START_BTN2_URL}")
+        buttons.buildbutton(f"⚔️ {Join Channel} ⚔️", f"{https://t.me/+Dq-Eov8vIj00OTk1}")
+        buttons.buildbutton(f"🧑‍💻 {Mirror Group}", f"{https://t.me/stpremiumleech}")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''This bot can mirror all your links to Google Drive!
